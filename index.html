@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Cooperation Does Matter: Exploring Multi-Order Bilateral Relations for Audio-Visual Segmentation.">
+  <meta name="keywords" content="COMBO, COMBOAVS, AVS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cooperation Does Matter: Exploring Multi-Order Bilateral Relations for Audio-Visual Segmentation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <!-- 加载字体样式 -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <!-- 现代化的CSS框架 -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- 一个图标库 -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">  
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- 图片的轮播组件 -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <!-- 图片的滑动组件 -->
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <!-- 特定的脚本 -->
+  <script src="./static/js/index.js"></script>
+</head>  
+<!-- 上述表示head的结束 -->
+<!-- 页面的可见内容在body中 -->
+<body>
+
+<!-- 导航栏开始 -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- 导航栏品牌标志区域开始 -->
+  <div class="navbar-brand">
+    <!-- 导航栏汉堡式菜单按钮，主要用于移动设备 -->
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <!-- 汉堡式菜单按钮的三条线，对屏幕阅读器隐藏 -->
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- 导航栏品牌标志区域结束 -->
+
+  <!-- 导航菜单开始 -->
+  <div class="navbar-menu">
+    <!-- 导航条开始区域，设置样式以使内容居中 -->
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <!-- 导航项，链接到https://keunhong.com -->
+      <a class="navbar-item" href="https://yannqi.github.io/">
+        <!-- 导航项内的图标，使用Font Awesome图标库的家(home)图标 -->
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+      </a>
+
+      <!-- 带有下拉菜单的导航项，鼠标悬停时展开 -->
+      <!-- <div class="navbar-item has-dropdown is-hoverable"> -->
+        <!-- 下拉菜单的触发链接 -->
+        <!-- <a class="navbar-link"> -->
+          <!-- More Research -->
+        <!-- </a> -->
+        <!-- 下拉菜单内容开始 -->
+        <!-- <div class="navbar-dropdown"> -->
+          <!-- 下拉菜单的各个导航项，链接到各个研究项目的网站 -->
+          <!-- <a class="navbar-item" href="https://hypernerf.github.io">HyperNeRF</a> -->
+          <!-- <a class="navbar-item" href="https://nerfies.github.io">Nerfies</a> -->
+          <!-- <a class="navbar-item" href="https://latentfusion.github.io">LatentFusion</a> -->
+          <!-- <a class="navbar-item" href="https://photoshape.github.io">PhotoShape</a> -->
+        <!-- </div> -->
+        <!-- 下拉菜单内容结束 -->
+      </div>
+    </div>
+    <!-- 导航条开始区域结束 -->
+  </div>
+  <!-- 导航菜单结束 -->
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div style="display: flex; align-items: flex-start;">
+            <img src="./static/images/logo.png" alt="Logo" style="width: 60px; margin-right: 0px;">
+            <h1 class="title is-1 publication-title">Cooperation Does Matter: <p>Exploring Multi-Order Bilateral Relations</p> for Audio-Visual Segmentation</h1>
+          </div>
+           <!-- Accepted Notification Start -->
+            <p class="is-size-3 has-text-weight-semibold has-text-grey">
+              Accepted by CVPR 2024!
+            </p>
+            <!-- Accepted Notification End -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yannqi.github.io/">Qi Yang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Xing Nie<sup>1</sup>,</span>
+            <span class="author-block">
+              Tong Li<sup>2</sup>,</span>
+            <span class="author-block">
+                Pengfei Gao<sup>2</sup>,</span>  
+            <span class="author-block">
+                Ying Guo<sup>2</sup>,</span>
+            <span class="author-block">
+                Cheng Zhen<sup>2</sup>,</span>
+            <span class="author-block">
+                 Pengfei Yan<sup>2</sup>,</span>
+            <span class="author-block">
+                <a href="https://people.ucas.ac.cn/~xiangshiming">Shiming Xiang</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Institute of Automation, Chinese Academy of Sciences,</span>
+            <span class="author-block"><sup>2</sup>Meituan</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2312.06462.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.06462"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/yannqi/COMBO-AVS"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="audio_video" 
+      controls 
+      preload 
+      playsinline 
+      poster="./static/images/Audio_black_01.png"
+      height="100%">
+        <source src="./static/videos/Audio_black.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recently, an audio-visual segmentation (AVS) task has been introduced, aiming to group pixels with sounding objects within a given video. This task necessitates a first-ever audio-driven pixel-level understanding of the scene, posing significant challenges.
+          </p>
+          <p>
+            In this paper, we propose an innovative audio-visual transformer framework, termed COMBO, an acronym for COoperation of Multi-order Bilateral relatiOns. 
+            For the first time, our framework explores three types of bilateral entanglements within AVS: pixel entanglement, modality entanglement, and temporal entanglement. Regarding pixel entanglement, we employ a Siam-Encoder Module (SEM) that leverages prior knowledge to generate more precise visual features from the foundational model. For modality entanglement, we design a Bilateral-Fusion Module (BFM), enabling COMBO to align corresponding visual and auditory signals bi-directionally.
+            As for temporal entanglement, we introduce an innovative adaptive inter-frame consistency loss according to the inherent rules of temporal.
+          </p>
+          <p>
+            Comprehensive experiments and ablation studies on AVSBench-object (84.7 mIoU on S4, 59.2 mIou on MS3) and AVSBench-semantic (42.1 mIoU on AVSS) datasets demonstrate that COMBO surpasses previous state-of-the-art methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="is-centered">
+
+      <!-- Architecture. -->
+        <div class="content">
+          <h2 class="title is-2">Architecture</h2>
+
+          <img src="./static/images/Architecture.png" alt="Overview." style="width: 95%;">
+          <p>
+            Overview of the proposed COMBO. COMBO adopts a novel audio-visual transformer framework for audio-visual segmentation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Results. -->
+        <div class="content">
+          <h2 class="title is-2">Main Results</h2>
+          <p>
+            We evaluate our proposed method on the AVSBench dataset that consists of two scenarios: AVSBench-object and AVSBench-semantic.  
+            The download link is at <a href="http://www.avlbench.opennlplab.cn/download">AVSBench</a>.
+          </p>
+          <img src="./static/images/Results.png" alt="Results on AVSBench-object." style="width: 95%; ">
+
+          <p>
+            These experiments confirm that our COMBO model surpasses the performance of existing state-of-the-art methods, consequently setting a new benchmark
+            for audio-visual segmentation.
+            
+          </p>
+        </div>
+        <!-- Visulization. -->
+        <div class="content">
+          <h2 class="title is-2">Qualitative Analysis</h2>
+          <img src="./static/images/visualization.png" alt="Visulization." style="width: 100%; height: 100%;">
+
+          <p>
+            As depicted in the figure, our proposed method, COMBO, exhibits superior audio-temporal and spatial localization quality, leading to better visualization and segmentation performance.
+            
+          </p>
+        </div>
+
+      </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yang2023cooperation,
+      author={Qi Yang and Xing Nie and Tong Li and Pengfei Gao and Ying Guo and Cheng Zhen and Pengfei Yan and Shiming Xiang},
+      title={Cooperation Does Matter: Exploring Multi-Order Bilateral Relations for Audio-Visual Segmentation},
+      booktitle={arXiv preprint arxiv:2312.06462},
+      year={2023}
+}
+</code></pre>
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2312.06462.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://yannqi.github.io/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <!-- <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. -->
+          <!-- </p> -->
+            This website is built from <a
+              href="https://github.com/nerfies/nerfies.github.io">nefries</a>.  
+              <p>
+              It is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+Commons Attribution-ShareAlike 4.0 International License</a>.
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
